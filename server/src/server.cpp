@@ -38,6 +38,8 @@ public:
                    system_msgs::squareResponse &response)
     {
         ROS_INFO("Get Square for [%ld]", (long int)request.a);
+        response.b = (long int)request.a * (long int)request.a;
+        ROS_INFO("Sending back response %ld", (long int)response.b);
         return true;
     }
 };
